@@ -16,5 +16,5 @@
   4) Reverse switch-(when pressed, it reverses the functionality – i.e. price is x percentage higher 
      than upper Bollinger band go long and vice versa)
 
-o fill this that what he needs the inputs from the user ,example client Id and pass etc
+## fill this that what he needs the inputs from the user ,example client Id and pass etc
   1) api keys
