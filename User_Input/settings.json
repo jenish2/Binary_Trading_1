@@ -1,0 +1,12 @@
+{
+  "timeframe": "1min",
+  "x_%_value": 23,
+  "y_%_value": 22,
+  "reverse_condition": false,
+  "bollinger_band": {
+    "length": 20,
+    "source": "close",
+    "standard_deviation": 2,
+    "offset": 0
+  }
+}
