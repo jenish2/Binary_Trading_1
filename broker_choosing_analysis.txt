@@ -1,0 +1,55 @@
+Top Broker List :-
+    1) IqOption
+       API Support -> no official Support from broker but community open source api available
+       API Stability ->
+       App Store Downloads :- 50M+
+       App Store Ratings :- 4.2
+       --> UnOfficial but community maintained open source apis are available
+            Link :- https://github.com/iqoptionapi/iqoptionapi
+
+       --> People have tried the IqOption for making bot
+       --> Api can be used in server
+       --> People have tried and putted IqOption bot on Heroku Server
+
+       Pros:- 1. Many people  have used it for making bot on internet
+              2. IQ Option has a minimum trade of $0.001 lots
+              3. Iq option allows the margin trading
+              4. Provide customer service 24*7 via live chat bot.
+
+       Cons:- It is some difficult to put money in account and withdrawal takes time.less no of ways to put money
+              in account.
+
+
+
+    2) Binary.com
+        API Support :- api support and document given by company but  difficult
+        API Stability
+        App Store Downloads :- 100K+
+        App Store Ratings :- 5
+        Pros:-
+            1. It allows the more  assets to trade
+            2. One of the old broker in market started in 1999
+            3. More Secure than Iq
+
+        Cons:-
+            1. Binary.com has a minimum trade of $1.
+            2. Binary.com not provide any kind of the leverage
+            3. Binary.com doesn't have as many trading tools as IQ Option does
+
+    3) Binomo
+        API Support :- Not any API support by broker
+        API Stability
+        App Store Downloads :- 10M+
+        App Store Ratings :- 4.5
+        Pros:-
+        Cons:-
+
+    4) Olymp Trade
+        API Support :- Not any API support
+        API Stability
+        App Store Downloads :- 50M+
+        App Store Ratings :- 3.9
+        Pros:-
+        Cons:-
+
+
