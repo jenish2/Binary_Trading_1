@@ -5,6 +5,7 @@ from iqoptionapi.stable_api import IQ_Option
 
 class BrokerIqOption:
     def __init__(self, credentials: dict, balance_type):
+        self.IQ = None
         self.EMAIL = credentials['user_email']
         self.PASSWORD = credentials['password']
         self.BALANCE_TYPE = balance_type  # PRACTICE / REAL / TOURNAMENT
@@ -50,10 +51,11 @@ class BrokerIqOption:
         order, order_id = self.IQ.buy_digital_spot(active=goal, amount=amount, action=action, duration=duration)
         if order:
             print(
-                "Order placed successfully with orderid:-{} amount:-{}  action:-{}   duration:-{} min".format(order_id,
-                                                                                                              amount,
-                                                                                                              action,
-                                                                                                              duration))
+                "Order placed successfully with orderid:- {}    amount:- {}     action:- {}     duration:- {} min".format(
+                    order_id,
+                    amount,
+                    action,
+                    duration))
         else:
             print("order failed!!")
             print(order_id)
