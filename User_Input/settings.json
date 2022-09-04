@@ -1,5 +1,5 @@
 {
-  "timeframe_of_chart_in_minute": 5,
+  "timeframe_of_chart_in_minute": 1,
   "x_%_value": 23,
   "y_%_value": 22,
   "reverse_condition": false,
@@ -9,7 +9,13 @@
     "standard_deviation": 2,
     "offset": 0
   },
-  "goal": "EURUSD",
+  "watchlist": [
+    {
+      "goal": "EURUSD-OTC"
+    }
+  ],
   "duration": 1,
-  "account_mode": "PRACTICE"
+  "account_mode": "PRACTICE",
+  "percent_of_wallet_amount_want_to_use_for_trade": 15,
+  "amount_for_trade": 10
 }
