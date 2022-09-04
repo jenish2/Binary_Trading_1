@@ -10,5 +10,6 @@
     "offset": 0
   },
   "goal": "EURUSD",
+  "duration": 1,
   "account_mode": "PRACTICE"
 }

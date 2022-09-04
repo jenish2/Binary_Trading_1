@@ -46,9 +46,18 @@ class BrokerIqOption:
         print("data fetched by api")
         return dataframe[["from", "close", "min", "max", "volume"]]
 
-    def place_order(self):
-        self.IQ
-        pass
+    def place_order(self, goal, amount, action, duration):
+        order, order_id = self.IQ.buy_digital_spot(active=goal, amount=amount, action=action, duration=duration)
+        if order:
+            print(
+                "Order placed successfully with orderid:-{} amount:-{}  action:-{}   duration:-{} min".format(order_id,
+                                                                                                              amount,
+                                                                                                              action,
+                                                                                                              duration))
+        else:
+            print("order failed!!")
+            print(order_id)
+        return order, order_id
 
     @property
     def balance(self):
@@ -63,5 +72,6 @@ if __name__ == "__main__":
 
     biq = BrokerIqOption(credentials=cred, balance_type="PRACTICE")
     biq.connect()
-    print(biq.get_candle_data(goal="EURUSD", timeframe_of_chart_in_minute=5))
+    print(biq.get_candle_data(goal="EURUSD-OTC", timeframe_of_chart_in_minute=5))
     print(biq.balance)
+    biq.place_order(goal="EURUSD-OTC", amount=1, action="call", duration=1)
