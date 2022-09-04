@@ -1,5 +1,5 @@
 {
-  "timeframe": "1min",
+  "timeframe_of_chart_in_minute": 5,
   "x_%_value": 23,
   "y_%_value": 22,
   "reverse_condition": false,
@@ -8,5 +8,7 @@
     "source": "close",
     "standard_deviation": 2,
     "offset": 0
-  }
+  },
+  "goal": "EURUSD",
+  "account_mode": "PRACTICE"
 }
