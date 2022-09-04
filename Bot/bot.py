@@ -5,11 +5,12 @@ from Broker.broker_api import BrokerIqOption
 
 
 class Bot(Thread):
-    def __init__(self, credentials, configuration):
+    def __init__(self, credentials, configuration) -> None:
+        super().__init__()
         self.CRED = credentials
         self.CONFIG = configuration
         self.API = BrokerIqOption(credentials=self.CRED, balance_type=self.CONFIG['account_mode'])
         self.API.connect()
 
     def run(self) -> None:
-        pass
+        print("Bot Started Successfully!!!!")
