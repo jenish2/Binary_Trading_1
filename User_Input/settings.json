@@ -1,7 +1,7 @@
 {
   "timeframe_of_chart_in_minute": 1,
-  "x_%_value": 23,
-  "y_%_value": 22,
+  "x_%_value": 0.01,
+  "y_%_value": 0.01,
   "reverse_condition": false,
   "bollinger_band": {
     "length": 20,
@@ -11,11 +11,10 @@
   },
   "watchlist": [
     {
-      "goal": "EURUSD-OTC"
+      "goal": "EURUSD"
     }
   ],
   "duration": 1,
   "account_mode": "PRACTICE",
-  "percent_of_wallet_amount_want_to_use_for_trade": 15,
   "amount_for_trade": 10
 }

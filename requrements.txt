@@ -1,0 +1,5 @@
+iqoptionapi @ https://github.com/iqoptionapi/iqoptionapi/archive/refs/heads/master.zip
+dateutils==0.6.12
+multitasking==0.0.10
+pandas==1.4.2
+pytz==2022.1

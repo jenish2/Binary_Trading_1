@@ -32,10 +32,14 @@ class Bot(Thread):
                             df = self.API.get_candle_data(watch['goal'], self.CONFIG['timeframe_of_chart_in_minute'])
                             can_enter, entry_action = EntryConditionCheck.check_for_entry(df, self.CONFIG)
                             if can_enter:
+                                print()
+                                print(datetime.datetime.now(pytz.timezone("UTC")))
+                                print()
                                 order_status, order_id = self.API.place_order(watch['goal'],
                                                                               self.CONFIG['amount_for_trade'],
                                                                               entry_action,
                                                                               self.CONFIG['duration'])
+                                print()
 
 
                     except Exception as e:
