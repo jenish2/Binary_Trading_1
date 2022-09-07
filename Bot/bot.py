@@ -33,7 +33,7 @@ class Bot(Thread):
                             can_enter, entry_action = EntryConditionCheck.check_for_entry(df, self.CONFIG)
                             if can_enter:
                                 print()
-                                print(datetime.datetime.now(pytz.timezone("UTC")))
+                                print(datetime.now(pytz.timezone("UTC")))
                                 print()
                                 order_status, order_id = self.API.place_order(watch['goal'],
                                                                               self.CONFIG['amount_for_trade'],

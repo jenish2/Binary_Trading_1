@@ -36,7 +36,7 @@ class BrokerIqOption:
     def get_candle_data(self, goal: str, timeframe_of_chart_in_minute: int):
         timestamp = self.IQ.get_server_timestamp()
         candle = []
-        for _ in range(6):
+        for _ in range(3):
             x = self.IQ.get_candles(goal, (timeframe_of_chart_in_minute * 60), 1000, timestamp)
             timestamp = int(x[0]["from"]) - 1
             candle += x
