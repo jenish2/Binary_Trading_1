@@ -1,5 +1,8 @@
 # Author : Jenish Dholariya
+from datetime import datetime
+from datetime import timezone
 import pandas as pd
+import pytz
 from iqoptionapi.stable_api import IQ_Option
 
 
@@ -35,6 +38,7 @@ class BrokerIqOption:
 
     def get_candle_data(self, goal: str, timeframe_of_chart_in_minute: int):
         timestamp = self.IQ.get_server_timestamp()
+        print(timestamp)
         candle = []
         for _ in range(3):
             x = self.IQ.get_candles(goal, (timeframe_of_chart_in_minute * 60), 1000, timestamp)
@@ -44,7 +48,7 @@ class BrokerIqOption:
         dataframe = pd.DataFrame(candle)
         dataframe.sort_values(by=["from"], inplace=True, ascending=True)
         dataframe.drop(dataframe.tail(1).index, inplace=True)
-        print("data fetched by api")
+        print("data fetched by api   : ")
         return dataframe[["from", "close", "min", "max", "volume"]]
 
     def place_order(self, goal, amount, action, duration):
@@ -65,15 +69,14 @@ class BrokerIqOption:
     def balance(self):
         return self.IQ.get_balance()
 
-
 if __name__ == "__main__":
     cred = {
-        "user_email": "rolimiw174@vpsrec.com",
-        "password": "Abc@123@Xyz"
+        "user_email": "vivekkapadiya26@gmail.com",
+        "password": "QWERTY@123"
     }
 
     biq = BrokerIqOption(credentials=cred, balance_type="PRACTICE")
     biq.connect()
-    print(biq.get_candle_data(goal="EURUSD-OTC", timeframe_of_chart_in_minute=5))
+    print(biq.get_candle_data(goal="EURUSD", timeframe_of_chart_in_minute=1))
     print(biq.balance)
-    biq.place_order(goal="EURUSD-OTC", amount=1, action="call", duration=1)
+    # biq.place_order(goal="EURUSD", amount=1, action="call", duration=1)
