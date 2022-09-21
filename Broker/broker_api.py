@@ -1,8 +1,5 @@
 # Author : Jenish Dholariya
-from datetime import datetime
-from datetime import timezone
 import pandas as pd
-import pytz
 from iqoptionapi.stable_api import IQ_Option
 
 
@@ -47,7 +44,7 @@ class BrokerIqOption:
 
         dataframe = pd.DataFrame(candle)
         dataframe.sort_values(by=["from"], inplace=True, ascending=True)
-        dataframe.drop(dataframe.tail(1).index, inplace=True)
+        # dataframe.drop(dataframe.tail(1).index, inplace=True)
         print("data fetched by api   : ")
         return dataframe[["from", "close", "min", "max", "volume"]]
 

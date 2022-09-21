@@ -28,7 +28,7 @@ class Bot(Thread):
                 if self.tick_on_timeframe(self.CONFIG['timeframe_of_chart_in_minute']):
                     try:
                         for watch in self.CONFIG['watchlist']:
-                            time.sleep(2)
+                            time.sleep(25)
                             df = self.API.get_candle_data(watch['goal'], self.CONFIG['timeframe_of_chart_in_minute'])
                             can_enter, entry_action = EntryConditionCheck.check_for_entry(df, self.CONFIG)
                             if can_enter:
